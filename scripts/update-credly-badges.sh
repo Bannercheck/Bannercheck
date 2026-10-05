@@ -4,7 +4,20 @@ set -eu
 : "${CREDLY_USER:?CREDLY_USER is required}"
 README="${README:-README.md}"
 
-json=$(curl -fsSL --retry 3 --retry-delay 5 -H 'Accept: application/json' "https://www.credly.com/users/$CREDLY_USER/badges.json")
+url="https://www.credly.com/users/$CREDLY_USER/badges.json"
+body=$(mktemp)
+status=$(curl -sSL --retry 3 --retry-delay 5 -H 'Accept: application/json' -A 'Mozilla/5.0 (badge-readme)' -o "$body" -w '%{http_code}' "$url")
+if [ "$status" != 200 ]; then
+  echo "::error::Credly answered HTTP $status for $url" >&2
+  head -c 300 "$body" >&2; echo >&2
+  exit 1
+fi
+if ! jq -e '.data | type == "array"' "$body" >/dev/null 2>&1; then
+  echo "::error::Credly response is not the expected JSON ({data: [...]})" >&2
+  head -c 300 "$body" >&2; echo >&2
+  exit 1
+fi
+json=$(cat "$body"); rm -f "$body"
 html=$(printf '%s' "$json" | jq -r '
   [.data[]? | select((.state // "accepted") == "accepted" and (.public // true))]
   | map(
