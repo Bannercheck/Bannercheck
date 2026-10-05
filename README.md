@@ -43,5 +43,8 @@
 
 <p>
 <!-- CREDLY:START -->
+<a href="https://www.credly.com/badges/fc18105c-51bc-4ccf-8ff9-eae0c16a1d1e/public_url" title="Professional Cloud DevOps Engineer Certification"><img src="https://images.credly.com/images/33f08b7e-fa6a-41cd-810a-21cc1c336f6d/image.png" alt="Professional Cloud DevOps Engineer Certification" width="120"></a>
+<a href="https://www.credly.com/badges/b8cedbef-9063-48e1-98d4-88b806e1dcbc/public_url" title="CCNA: Introduction to Networks"><img src="https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png" alt="CCNA: Introduction to Networks" width="120"></a>
+<a href="https://www.credly.com/badges/1948ecd5-f483-4848-8d8c-cb68807275cf/public_url" title="Introduction to Cybersecurity"><img src="https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png" alt="Introduction to Cybersecurity" width="120"></a>
 <!-- CREDLY:END -->
 </p>
