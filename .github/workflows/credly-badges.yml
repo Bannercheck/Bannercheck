@@ -28,4 +28,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Update Credly badges"
+          # a re-run of an older run starts from an old commit; catch up with main before pushing
+          git pull --rebase origin main
           git push
