@@ -4,7 +4,7 @@ set -eu
 : "${CREDLY_USER:?CREDLY_USER is required}"
 README="${README:-README.md}"
 
-json=$(curl -fsSL -H 'Accept: application/json' "https://www.credly.com/users/$CREDLY_USER/badges.json")
+json=$(curl -fsSL --retry 3 --retry-delay 5 -H 'Accept: application/json' "https://www.credly.com/users/$CREDLY_USER/badges.json")
 html=$(printf '%s' "$json" | jq -r '
   [.data[]? | select((.state // "accepted") == "accepted" and (.public // true))]
   | map(
