@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 6 * * 1"   # every Monday 06:17 UTC
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update-credly-badges.sh
+      - .github/workflows/credly-badges.yml
 
 permissions:
   contents: write
