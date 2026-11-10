@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://tayfurozkara.web.app"><img src="https://img.shields.io/badge/Website-tayfurozkara.web.app-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="https://tayfurozkara.com"><img src="https://img.shields.io/badge/Website-tayfurozkara.com-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
   <a href="https://www.linkedin.com/in/tayfurozkara/"><img src="https://img.shields.io/badge/LinkedIn-tayfurozkara-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://www.credly.com/users/tayfur-ozkara.4537ea6c"><img src="https://img.shields.io/badge/Credly-badges-FF6B00?style=for-the-badge&logo=credly&logoColor=white" alt="Credly"></a>
 </p>
